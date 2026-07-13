@@ -41,7 +41,7 @@ header {
  }
 /* navigation */
 .logo {
-    margin-left: 1rem;
+    margin-left: var(--space-md);
 }
 #headerNav {
     position: relative;
@@ -68,6 +68,7 @@ padding:3px;
  border: none;
 cursor: pointer;
 background: transparent;
+margin-right: var(--space-md);
 }
 .navLinks {
     position: fixed;
@@ -202,7 +203,7 @@ div#heroContent {
 a.btn {
     color: var(--cardBg);
     box-shadow: var(--hoverShadow);
-    padding:  var(--space-xs);
+    padding:  var(--space-sm);
     text-decoration: none;
     text-align: center;
     cursor: pointer;
@@ -228,6 +229,7 @@ a.primaryBtn {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 1140px;
     gap: 2rem;
@@ -236,7 +238,7 @@ a.primaryBtn {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: var(--space-xl);
+    margin: var(--space-md) 0;
 }
 
 .card {
@@ -251,6 +253,7 @@ a.primaryBtn {
     transition: transform .3s ease-in-out;
     position: relative;
     min-height: 300px;
+    margin-block: var(--space-md);
 }
 .card:hover {
     transform: translateY(15px);
@@ -307,5 +310,7 @@ display: none;
 .navLinks li {
     margin:0 2rem;
 }
-
+.container {
+    flex-direction: row;
+}
 }
