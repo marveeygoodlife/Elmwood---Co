@@ -55,39 +55,38 @@
     </header>
 
     <div class="container">
-        <div>
+        
         <div class="gridCard">
             <div class="card cardOne">
                 <h3>The Ashgrove Chair</h3>
-                <p> — Warm oak frame, woven natural-fiber seat. Built for dining rooms that see daily use.</p>
+               <!--  <p> — Warm oak frame, woven natural-fiber seat. Built for dining rooms that see daily use.</p> -->
             </div>
             <!-- dard 2 -->
-            <div class="card cardTwo">
-                <h3>The Birchline Chair</h3>
-                <p> Minimal frame, deep upholstered comfort. Suited to studies, reading corners, and quiet spaces.</p>
+            <div class="card cardTwo ">
+                <h3>The Birchline Chair</h3><!-- 
+                <p> Minimal frame, deep upholstered comfort. Suited to studies, reading corners, and quiet spaces.</p> -->
             </div>
             <!-- card 3 -->
-            <div class="card cardThree">
+            <div class="card cardThree ">
                 <h3>The Rowan Chair</h3>
-                <p> Curved backrest, solid walnut construction. A statement piece for entryways and dining heads.</p>
+               <!--  <p class="flexDown"> Curved backrest, solid walnut construction. A statement piece for entryways and dining heads.</p> -->
             </div>
         </div>
         <div class="gridCard">
             <div class="card">
                 <h3>Hollow Lounge Chair</h3>
-                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn primaryBtn">Learn More</a>
             </div>
             <div class="card">
                 <h3>Swing  Chair</h3>
-                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn primaryBtn">Learn More</a>
             </div>
             <div class="card">
                 <h3>Bamboo Lights</h3>
-                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn primaryBtn">Learn More</a>
             </div>
         </div>
         </div>
-     </div>
   </section>
   <section id="services">
     <header>
@@ -97,31 +96,51 @@
             <div class="gridCard">
                 <!-- card 1 -->
                 <div class="card">
+                    <div class="cardImg">
+                        <img src="images/pencil-ruler (1).svg" alt="pencil-ruler">
+                    </div>
+                    <div class="cardText">
                     <h3>Custom builds</h3>
                     <p>
                         Send us your space and preferences. We'll design and hand-build a chair sized, shaped, and finished to fit it exactly.
                     </p>
+                    </div>
                 </div>
                 <!-- card 2 -->
                 <div class="card">
+                    <div class="cardImg">
+                        <img src="images/hammer.svg" alt="hammer">
+                    </div>
+                    <div class="cardText">
                     <h3>Restoration</h3>
                     <p>
                         Have an old wooden chair with sentimental value? We refinish, rejoin, and reupholster pieces back to daily use.
                     </p>
+                    </div>
                 </div>
                 <!-- card 3 -->
                 <div class="card">
+                    <div class="cardImg">
+                        <img src="images/boxes.svg" alt="boxes">
+                    </div>
+                    <div class="cardText">
                     <h3>Bulk Orders</h3>
                     <p>
                         Furnishing a restaurant, studio, or office? We offer volume pricing and consistent finishing across larger orders.
                     </p>
+                    </div>
                 </div>
                 <!-- card 4 -->
                 <div class="card">
-                    <h3>Wood Consultion</h3>
+                    <div class="cardImg">
+                        <img src="images/tree-pine.svg" alt="tree-pine">
+                    </div>
+                    <div class="cardText">
+                        <h3>Wood Consultion</h3>
                     <p>
                         Not sure which timber fits your space or climate? We'll walk you through oak, walnut, and ash options before you commit.
                     </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,12 +190,24 @@
         </div>
         <div class="contactForm">
             <form action="" method="post">
+                <div class="formDiv">
                 <label for="fullname">Full Name:</label>
-                <input type="text" name="fullname" id="fullname" autocomplete="name" required placeholder="John Doe">
+                <input type="text" name="fullname" id="fullname" autocomplete="name" required placeholder="John Doe"  aria-describedby="nameError">
+                <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="formDiv">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" autocomplete="email" required placeholder="johndoe@gmail.com">
+                <input type="email" name="email" id="email" autocomplete="email" required placeholder="johndoe@gmail.com" aria-describedby="emailError">
+                <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="formDiv">
                 <label for="telephone">Telephone:</label>
-                <input type="tel" name="telephone" id="telephone" autocomplete="tel" required placeholder="+234-707-5676-564">
+                <input type="tel" name="telephone" id="telephone" autocomplete="tel" required placeholder="+234-707-5676-564"  aria-describedby="telephoneError">
+                <span class="error" id="telephoneError"></span>
+                </div>
+
                 <!-- update name -->
                 <label for="select">I'm interested in:</label>
                 <select name="select" id="select" >

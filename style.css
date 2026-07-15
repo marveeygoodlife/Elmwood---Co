@@ -12,7 +12,7 @@
 --cardBg: #F7F3EA;
 --cardShadow: 0 2px 8px rgba(92, 68, 51, 0.08);
 --hoverShadow: 0 4px 14px rgba(92, 68, 51, 0.14);
---border: 1px solid rgba(92, 68, 51, 0.12);
+--border: 1px solid #F7F3EA;
  /* Spacing scale — based on a 4px unit */
   --space-xs: 0.5rem;   /* 8px */
   --space-sm: 1rem;     /* 16px */
@@ -226,17 +226,17 @@ a.primaryBtn {
 
 /* collection section */
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1140px;
     gap: 2rem;
 }
 .gridCard {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin: var(--space-md) 0;
 }
@@ -245,26 +245,23 @@ a.primaryBtn {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border: 1px solid var(--border);
+     border: 1px solid var(--border);
     box-shadow: var(--cardShadow);
     background: var(--cardBg);
     padding:   var(--space-sm);
     border-radius: 12px;
     transition: transform .3s ease-in-out;
     position: relative;
-    min-height: 300px;
+    min-height: 310px;
     margin-block: var(--space-md);
 }
+
 .card:hover {
     transform: translateY(15px);
     box-shadow: var(--hoverShadow);
 }
 .cardOne {
     background: url(images/ashgroovechair.PNG) center / cover;
-}
-.cardOne p {
-        font-size: .8rem;
-        margin-bottom: 0;
 }
 
 .cardTwo {
@@ -273,9 +270,38 @@ a.primaryBtn {
 .cardThree {
     background: url(images/rowanchair.PNG) center / cover;
 }
+ /* services section */
+ #services {
+    background-color: var(--accent);
+ }
+ div.cardImg   {
+margin-bottom: var(--space-xs);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+ 
+div.cardText h3 {
+    margin-bottom:  var(--space-sm);
+}
+/* about */
+#about {
+    background: var(--bgColor);
+}
+
+/* contact */
+#contact {
+    background-color: var(--cardBg);
+    margin-bottom: unset;
+}
 footer {
     grid-area: "footer";
+    background: var(--textColor);
+    color: var(--bgColor);
 }     
+footer #footerNav ul li a {
+    color: var(--bgColor);
+}
 
 @media  screen and (min-width: 1024px) {
     #headerNav .navbarContent {
