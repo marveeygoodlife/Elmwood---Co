@@ -472,9 +472,9 @@ footer #footerNav ul li a:hover {
 }
 div.footerBottom {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 .socials {
     display: flex;
@@ -485,8 +485,21 @@ div.footerBottom {
 .socials i {
     font-size: 1.3rem;
 }
-
-footer span.hidden {
+.fa-brands {
+    color: var(--accent);
+    z-index: 1;
+    transition: transform .3s ease-in-out, color .2s ease;
+    margin-top: var(--space-3xl);
+    padding: 0;
+    margin-left: 0;
+}
+.fa-brands:hover {
+    color: var(--hoverColor);
+    z-index: 1;
+    transition: transform .3s ease-in-out, color .2s ease;
+    transform: scale(2);
+}
+  span.hidden {
 position: absolute;
 height: 1px;
 width: 1x;
@@ -602,8 +615,9 @@ flex: 1 1 45%;
 min-width: 300px;
 }
 #form textarea {
-    max-height: 90px;
+    min-height: 90px;
     width: 100%;
+    max-height: 150px;
     vertical-align: baseline;
 }
 #form button {
@@ -614,8 +628,10 @@ min-width: 300px;
 /* footer */
 div.footerBottom {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-inline: var(--space-md);
 }
+
 .socials {
     display: flex;
     flex-direction: row;
