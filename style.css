@@ -367,6 +367,8 @@ address div a {
     margin-top: 1.5rem;
     align-self: flex-start;
 }
+a.underline {
+text-decoration: underline;}
 #contactForm {
     padding: var(--space-md);
     margin: var(--space-md);
@@ -393,7 +395,7 @@ address div a {
     margin-bottom: .4rem;
  }
 #form  input, select, textarea {
-    padding: 0.7rem;
+    padding: 0.6rem;
     border: 1px solid var(--accent);
     border-radius: 6px;
     font-size: .95rem;
@@ -463,7 +465,10 @@ list-style-type: none;
 margin-bottom: .95rem;
 }
 footer #footerNav ul li a {
-    color: var(--''bgColor);
+    color: var(--bgColor);
+}
+footer #footerNav ul li a:hover {
+    color: var(--hoverColor);
 }
 div.footerBottom {
     display: flex;
@@ -471,6 +476,16 @@ div.footerBottom {
     align-items: center;
     gap: 3rem;
 }
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.socials i {
+    font-size: 1.3rem;
+}
+
 footer span.hidden {
 position: absolute;
 height: 1px;
@@ -587,8 +602,9 @@ flex: 1 1 45%;
 min-width: 300px;
 }
 #form textarea {
-    min-height: 100px;
+    max-height: 90px;
     width: 100%;
+    vertical-align: baseline;
 }
 #form button {
     flex: 1 1 100%;
