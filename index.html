@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">    
+<link rel="stylesheet" href="assets/fontawesome/css/all.css">
 <title>Elmwood & Co</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <img src="images/elmwood-copy.webp" alt="Elmwood & Co. Logo" width="150" height="150">
         </div>
         <!-- navigation links -->
-            <ul id="navLinks" class="navLinks  ">
+            <ul id="navLinks" class="navLinks">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#collection">Collection</a></li>
                 <li><a href="#services">Services</a></li>
@@ -24,11 +25,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- hamburger menu -->
-             <button type="button" aria-label="Toggle navigation" class="navToggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
                 </div>
             
         </nav>
@@ -43,15 +40,15 @@
             Every piece is joined, sanded, and finished by hand in small batches, using timber sourced responsibly.
         </p>
         <div class="heroBtns">
-            <a href="#" class="primaryBtn btn">Explore the collection</a>
-            <a href="#" class="secondaryBtn btn">Book a custom build</a>
+            <a href="#" class=" btn secondaryBtn">Explore the collection</a>
+            <a href="#" class=" primaryBtn btn">Book a custom build</a>
         </div>
     </div>
   </section>
   <section id="collection">
     <header>
-        <h2>Our <span class="underline">Collection</span></h2>
-        <p>Every piece is shaped from natural materials — sanded, joined, and finished by hand. No two grains are alike, so no two chairs are either.</p>
+        <h2 class="h2">Our <span class="underline">Collection</span></h2>
+        <p>Every piece is shaped from natural materials, sanded, joined, and finished by hand. No two grains are alike, so no two chairs are either.</p>
     </header>
 
     <div class="container">
@@ -75,15 +72,15 @@
         <div class="gridCard">
             <div class="card">
                 <h3>Hollow Lounge Chair</h3>
-                <a href="#" class="btn primaryBtn">Learn More</a>
+                <a href="#" class="btn primaryBtn top">Learn More</a>
             </div>
             <div class="card">
                 <h3>Swing  Chair</h3>
-                <a href="#" class="btn primaryBtn">Learn More</a>
+                <a href="#" class="btn primaryBtn top">Learn More</a>
             </div>
             <div class="card">
                 <h3>Bamboo Lights</h3>
-                <a href="#" class="btn primaryBtn">Learn More</a>
+                <a href="#" class="btn primaryBtn top">Learn More</a>
             </div>
         </div>
         </div>
@@ -165,32 +162,49 @@
         <div class="subBlock">
             <h3>Our Process</h3>
             <div class="innerBlocks">
-                <p>Select timber →</p>
-                <p>Hand-join frame →</p>
-                <p>Sand and shape → </p>
-                <p>Natural finish → </p>
+                <p>Select timber </p>
+                <p>Hand-join frame</p>
+                <p>Sand and shape </p>
+                <p>Natural finish </p>
                 <p>Quality check</p>
             </div>
     </div>
         <div class="subBlock">
             <h3>Our Values</h3>
             <div class="innerBlocks">
-                <p>Sourced responsibly →</p>
-                <p>Built to repair, not replace →</p>
-                <p> Designed for daily life, not just display. </p>
+                <p>Sourced responsibly</p>
+                <p>Built to repair, not replace</p>
+                <p> Designed for daily life, not just display.</p>
             </div>
     </div>
     </div>
   </section>
   <section id="contact">
     <header>
-        <h2>Get In Touch</h2>
+        <h2>Get In Touch </h2>
     </header>
     <div class="container">
         <div class="content">
             <p>Have a question about a piece, want a custom build, or looking to place a bulk order? Reach out — we personally reply within 1–2 business days.</p>
             <div id="contactId">
-        <p>Prefer to talk directly? Reach us at [<a href="mailto:elmwood&co@gmail.com" class="underline">elmwood&co@gmail.com</a>] or [<a href="tel:+2349020020020" rel="noreferrer" class="underline">+2349020020020</a> ] </p>
+        <h3>Prefer to talk directly? Reach us at:</h3>
+       <address>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                    <a href="mailto:elmwood&co@gmail.com" class="underline">elmwood&co@gmail.com</a>
+
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4433" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call-icon lucide-phone-call"><path d="M13 2a9 9 0 0 1 9 9"/><path d="M13 6a5 5 0 0 1 5 5"/><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                    <a href="tel:+2349020020020" rel="noreferrer" class="underline">+2349020020020</a> 
+        </div>
+ <br>  
+        Elmwood & Co.<br>
+        27 Millwright Lane <br>
+        Asheville, NC 28801<br>
+        United States
+        
+        </address>
     </div>
         </div>
         
@@ -269,13 +283,25 @@ EWC Furniture incorporated in JULY 2026 it's growing into the #1 MARKETPLACE for
     <div class="footerBottom">
       
         <div>
-            <p>FIne print: &copy; 2026 Elmwood & Co. All rights reserved.</p>
+            <p>Fine print: &copy; 2026 Elmwood & Co. All rights reserved.</p>
         </div>
           <div class="socials">
-        <a href="">Facebook</a>
-        <a href="">Instagram</a>
-        <a href="">LinkedIn</a>
-        <a href="">Pinterest</a>
+        <a href="">
+            <i class="fa-brands fa-facebook" aria-hidden="true">
+            <span class="hidden">facebook</span>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-instagram" aria-hidden="true">
+            <span class="hidden">instagram</span>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-linkedin" aria-hidden="true">
+            <span class="hidden">linkedIn</span>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-pinterest" aria-hidden="true">
+            <span class="hidden">pinterest</span>
+        </a>
         </div>
     </div>
 </footer>
