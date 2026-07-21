@@ -8,18 +8,6 @@ const name = document.getElementById("fullname");
 const email = document.getElementById("email");
 const telephone = document.getElementById("telephone");
 
-/* form error elements */
-const nameError = document.getElementById("nameError");
-const emailError = document.getElementById("emailError");
-const telephoneError = document.getElementById("telephoneError");
-
-
-
-/* regex pattern */
-const nameReg = /^[A-Za-z\s\-']+$/;
-const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const telephoneReg = /^\+?[\d\s\-\(\)]{7,15}$/;
-
 /* 01 - navigation */
 /* show / hide Nav Ul */
 toggleBtn.addEventListener("click", () => {
@@ -45,37 +33,62 @@ document.addEventListener("click", e => {
  
 /* 02 - Form  */
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    const isValid = validateEmail(email) && validateName(name) && validateTelephone(telephone);
 
-    /* form input values */
-const nameValue = name.value.trim();
-const emailValue = email.value.trim();
-    const telValue = telephone.value.trim();
-    let isValid = true;
+    if (!isValid) {
+        e.preventDefault();
+    }
+});
+/* helper functions */
+function showError(input, message) {
+    const error = input.nextElementSibling;
+    error.textContent = message;
+}
+function clearError(input) {
+    const error = input.nextElementSibling;
+    error.textContent = "";
+}
+/* validation functions */
+function validateName(input) {
+    const nameReg =/^[A-Za-z][A-Za-z\s'-]{1,}$/;
+    const nameValue = input.value.trim();
 
     if (!nameReg.test(nameValue)) {
-        isValid = false;
-    nameError.textContent = "Name can only contain letters, spaces, and hyphens";
-} else {
-    nameError.textContent = "";
+        input.classList.add("invalid");
+        showError(input, "Name can only contain letters, spaces, and hyphens");
+        return false;
+    } 
+    input.classList.remove("invalid");
+    clearError(input);
+    return true;
 }
+function validateEmail(input) {
+    const emailValue = input.value.trim();
+    const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailReg.test(emailValue)) {
-            isValid = false;
-
-    emailError.textContent = "Please enter a valid email address (e.g. name@example.com)";
-} else {
-    emailError.textContent = "";
+        input.classList.add("invalid");
+        showError(input, "Please enter a valid email address (e.g. name@example.com)");
+        return false;
+    }
+    input.classList.remove("invalid");
+    clearError(input);
+    return true;
 }
+function validateTelephone(input) {
+    const telValue = input.value.trim();
+    const telephoneReg = /^\+?[\d\s\-\(\)]{7,15}$/;
 
-    if (!telephoneRegReg.test(telValue)) {
-            isValid = false;
-
-    telephoneError.textContent = "Please enter a valid phone number (7–15 digits, numbers only)";
-} else {
-    telephoneError.textContent = "";
+    if (!telephoneReg.test(telValue)) {
+        input.classList.add("invalid");
+        showError(input, "Please enter a valid phone number (7–15 digits, numbers only)");
+        return false;
+    };
+    input.classList.remove("invalid");
+    clearError(input);
+    return true;
 }
-    if (isValid) {
-        form.reset();
-}
-})
+/* validate when field is out of focus */
+name.addEventListener("blur", (e) => validateName(e.target));
+email.addEventListener("blur", (e) => validateEmail(e.target));
+telephone.addEventListener("blur", (e) => validateTelephone(e.target));

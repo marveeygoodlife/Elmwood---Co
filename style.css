@@ -509,6 +509,10 @@ padding: 0;
 overflow: hidden;
 white-space: nowrap;
 }
+#form input.invalid {
+    border: 1px solid red;
+    outline: none;
+ }
 /* media queries */
 
  /* tablet screen  */
